@@ -1,0 +1,140 @@
+@use 'colors' as *;
+@use 'mixin' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Inter', sans-serif;
+	font-family: 'Roboto Mono', monospace;
+	background-color: $dark-blue;
+}
+
+.header {
+	position: relative;
+}
+
+.nav {
+	// NAV - mobile
+	&__mobile {
+		position: relative;
+		height: 100vh;
+		overflow: hidden;
+
+		&-icon {
+			position: absolute;
+			color: $bright-green;
+			font-size: 4rem;
+			top: 3rem;
+			left: 3rem;
+		}
+
+		&-hamburger {
+			position: absolute;
+			top: 3rem;
+			right: 3rem;
+			z-index: 5;
+		}
+
+		&-list {
+			position: absolute;
+			height: 100vh;
+			width: 400px;
+			right: -160%;
+			transition: right 0.4s;
+			&-active {
+				right: 0;
+			}
+
+			&-wrapper {
+				display: flex;
+				width: 400px;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				height: 100%;
+				background-color: rgb(0, 0, 0, 0.8);
+			}
+		}
+
+		&-item {
+			text-decoration: none;
+			color: $light-blue;
+			font-size: 3rem;
+			margin-bottom: 3rem;
+			&-span {
+				color: $bright-green;
+			}
+		}
+	}
+
+	// NAV - desktop
+
+	&__desktop {
+		display: none;
+		justify-content: center;
+		align-items: center;
+		height: 100px;
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 85%;
+		}
+
+		&-icon {
+			color: $bright-green;
+			font-size: 4rem;
+		}
+
+		&-item {
+			text-decoration: none;
+			color: $light-blue;
+			font-size: 2rem;
+			margin-bottom: 3rem;
+			margin-right: 2rem;
+
+			&-span {
+				color: $bright-green;
+			}
+		}
+	}
+}
+
+.introduction {
+	position: absolute;
+	bottom: 30%;
+	left: 10%;
+	right: 10%;
+
+	&__h1 {
+		margin-bottom: 2rem;
+		color: $teal;
+	}
+
+	&__h2 {
+		margin-bottom: 1.5rem;
+		color: $light-blue;
+	}
+
+	&__p {
+		margin-bottom: 1rem;
+		color: $light-blue;
+	}
+}
+
+// Media
+@import './small';
+@import './medium';
+@import './large';
