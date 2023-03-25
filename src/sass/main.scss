@@ -134,6 +134,29 @@ body {
 	}
 }
 
+.main {
+	&__wrapper {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+}
+
+.section {
+	&__title {
+		margin-left: 5rem;
+		font-size: 2rem;
+
+		&-h3 {
+			color: $light-blue;
+			font-weight: 300;
+		}
+
+		&-span {
+			color: $bright-green;
+		}
+	}
+}
+
 // Media
 @import './small';
 @import './medium';
