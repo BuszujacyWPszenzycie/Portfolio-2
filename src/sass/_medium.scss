@@ -1,2 +1,15 @@
 @media (min-width: 992px) {
+	.introduction {
+		&__h1 {
+			font-size: 5rem;
+		}
+
+		&__h2 {
+			font-size: 3.5rem;
+		}
+
+		&__p {
+			font-size: 2rem;
+		}
+	}
 }

@@ -1,2 +1,17 @@
 @media (min-width: 1200px) {
+	.introduction {
+		left: 20%;
+
+		&__h1 {
+			font-size: 6rem;
+		}
+
+		&__h2 {
+			font-size: 4rem;
+		}
+
+		&__p {
+			font-size: 2.5rem;
+		}
+	}
 }
