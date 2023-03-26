@@ -16,7 +16,33 @@
 	.section {
 		&__title {
 			font-size: 2.5rem;
+
+			&-line {
+				&::after {
+					width: 90%;
+				}
+			}
+		}
+	}
+	.about {
+		&__box {
+			flex-direction: row;
+
+			&-text {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	.work {
+		&__wrapper {
+			max-width: 900px;
+		}
+
+		&__item {
+			&-description {
+				max-width: 900px;
+			}
 		}
 	}
 }
-
