@@ -145,14 +145,46 @@ body {
 	&__title {
 		margin-left: 5rem;
 		font-size: 2rem;
+		margin-bottom: 3rem;
 
 		&-h3 {
 			color: $light-blue;
 			font-weight: 300;
+			display: flex;
 		}
 
 		&-span {
 			color: $bright-green;
+		}
+
+		&-line {
+			width: 80%;
+			&::after {
+				background-color: $bright-green;
+				content: '';
+				display: inline-block;
+				height: 1px;
+				vertical-align: middle;
+				width: 70%;
+				margin-left: 3rem;
+			}
+		}
+	}
+}
+
+.about {
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		&-text {
+			color: $light-blue;
+			&-p {
+				margin-bottom: 2rem;
+				margin-left: 2rem;
+				margin-right: 2rem;
+			}
 		}
 	}
 }
